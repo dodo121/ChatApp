@@ -6,5 +6,7 @@
 </p>
 
 <%= react_component('Room', messages: @room.messages, room_id: @room.id) %>
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%#= react_component('MessageForm', room_id: @room.id) %>
+
+<%#= link_to 'Edit', edit_room_path(@room) %>
+<%#= link_to 'Back', rooms_path %>
