@@ -13,4 +13,14 @@ class User < ApplicationRecord
   has_many :conversations, through: :conversations_users
 
   scope :testing, -> { where(for_testing: true) }
+
+  def callers
+    conversations.map do |conv|
+      { conversation_id: conv.id, users_names: callers_names_except_self(conv.users) }
+    end
+  end
+
+  def callers_names_except_self(users)
+    users.select { |user| user != self }.map(&:email)
+  end
 end

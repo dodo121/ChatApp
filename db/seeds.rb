@@ -10,4 +10,5 @@ User.all.each_cons(2) do |users|
   conversation = Conversation.create
   conversation.users << users
   Message.create!(content: FFaker::Lorem.sentence, conversation: conversation, sender: users.first, receiver: users.last)
+  Message.create!(content: FFaker::Lorem.sentence, conversation: conversation, sender: users.last, receiver: users.first)
 end
