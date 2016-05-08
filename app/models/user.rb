@@ -3,4 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  #has_many :contacts, trough: :contacts_users
+
+  has_many :sent_messages, class_name: 'Message', foreign_key: :message_sender_id
+  has_many :received_messages, class_name: 'Message', foreign_key: :message_receiver_id
+
+  has_many :conversations_users
+  has_many :conversations, through: :conversations_users
+
+  scope :testing, -> { where(for_testing: true) }
 end

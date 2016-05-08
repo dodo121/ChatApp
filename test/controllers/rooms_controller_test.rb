@@ -1,48 +1,48 @@
 require 'test_helper'
 
-class RoomsControllerTest < ActionDispatch::IntegrationTest
+class conversationsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @room = rooms(:one)
+    @conversation = conversations(:one)
   end
 
   test "should get index" do
-    get rooms_url
+    get conversations_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_room_url
+    get new_conversation_url
     assert_response :success
   end
 
-  test "should create room" do
-    assert_difference('Room.count') do
-      post rooms_url, params: { room: { title: @room.title } }
+  test "should create conversation" do
+    assert_difference('conversation.count') do
+      post conversations_url, params: { conversation: { title: @conversation.title } }
     end
 
-    assert_redirected_to room_path(Room.last)
+    assert_redirected_to conversation_path(Conversation.last)
   end
 
-  test "should show room" do
-    get room_url(@room)
+  test "should show conversation" do
+    get conversation_url(@conversation)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_room_url(@room)
+    get edit_conversation_url(@conversation)
     assert_response :success
   end
 
-  test "should update room" do
-    patch room_url(@room), params: { room: { title: @room.title } }
-    assert_redirected_to room_path(@room)
+  test "should update conversation" do
+    patch conversation_url(@conversation), params: { conversation: { title: @conversation.title } }
+    assert_redirected_to conversation_path(@conversation)
   end
 
-  test "should destroy room" do
-    assert_difference('Room.count', -1) do
-      delete room_url(@room)
+  test "should destroy conversation" do
+    assert_difference('conversation.count', -1) do
+      delete conversation_url(@conversation)
     end
 
-    assert_redirected_to rooms_path
+    assert_redirected_to conversations_path
   end
 end

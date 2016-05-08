@@ -1,4 +1,4 @@
-@Room = React.createClass
+@Conversation = React.createClass
   getInitialState: ->
     messages: @props.messages
 
@@ -11,5 +11,5 @@
       id: 'conversation',
         for message in @state.messages
           React.createElement Message, key: message.id, message: message
-      React.createElement MessageForm, handleNewMessage: @addMessage, room_id: @props.room_id
+      React.createElement MessageForm, handleNewMessage: @addMessage, conversation_id: @props.conversation_id
 #      $("#conversation").scrollTop(500)

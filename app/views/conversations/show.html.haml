@@ -1,0 +1,8 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @conversation.title
+= react_component('Conversation', messages: @conversation.messages, conversation_id: @conversation.id)
+= link_to 'Edit', edit_conversation_path(@conversation)
+|
+= link_to 'Back', conversations_path
