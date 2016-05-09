@@ -8,7 +8,6 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    console.log @props.conversationId
     $.post "conversations/#{@props.conversationId}/messages", message: @state, (data) =>
       @props.handleNewMessage data
       @setState @getInitialState()
@@ -22,6 +21,8 @@
           name: 'content'
           onChange: @handleChange
           rows: 3
+          placeholder: 'Type your message here'
+          value: @state.content
         React.DOM.button
           className: 'btn btn-primary'
           type: 'submit'
