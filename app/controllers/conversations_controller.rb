@@ -1,15 +1,17 @@
 class ConversationsController < ApplicationController
   before_action :set_conversation, only: [:show, :edit, :update, :destroy]
+  respond_to :json
 
   # GET /conversations
   # GET /conversations.json
   def index
-    @conversations = Conversation.all
+    @last_conversation = current_user.conversations.by_newest_message
   end
 
   # GET /conversations/1
   # GET /conversations/1.json
   def show
+    @conversation = Conversation.find(params[:id]).messages
   end
 
   # GET /conversations/new

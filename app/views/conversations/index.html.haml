@@ -1,16 +1,5 @@
 %p#notice= notice
-%h1 conversations
-%table
-  %thead
-    %tr
-      %th Title
-      %th{:colspan => "3"}
-  %tbody
-    - @conversations.each do |conversation|
-      %tr
-        %td= conversation.title
-        %td= link_to 'Show', conversation
-        %td= link_to 'Edit', edit_conversation_path(conversation)
-        %td= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New conversation', new_conversation_path
+
+= react_component('Conversation',
+                  messages: @last_conversation.messages, conversation_id: @last_conversation.id, conversations: current_user.callers)
+

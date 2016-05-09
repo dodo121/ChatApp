@@ -8,7 +8,8 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post "#{@props.conversation_id}/messages", message: @state, (data) =>
+    console.log @props.conversationId
+    $.post "conversations/#{@props.conversationId}/messages", message: @state, (data) =>
       @props.handleNewMessage data
       @setState @getInitialState()
     , 'JSON'

@@ -1,14 +1,15 @@
 class MessagesController < ApplicationController
+  respond_to :json
+
   def create
-    @message = Message.new(message_params)
-    @message.conversation = Conversation.find(params[:conversation_id])
+    @message = Conversation.find(params[:conversation_id]).messages.build(message_params)
+    @message.sender = current_user
 
     if @message.save
-      format.json { render :show, status: :created, location: [@message.conversation, @message]  }
+      render :show, status: :created, location: [@message.conversation, @message]
     else
-      format.json { render json: @message.errors, status: :unprocessable_entity }
+      render json: @message.errors, status: :unprocessable_entity
     end
-    respond_to :json
   end
 
   private

@@ -2,8 +2,10 @@
   getInitialState: ->
     conversations: @props.conversations
 
+  handleCoversationChange: (conversation_id) ->
+    @props.handleCoversationChange conversation_id
+
   render: ->
     React.DOM.ul null,
       for conversation in @state.conversations
-        React.createElement ConversationDetails, key: conversation.id, conversation: conversation
-        #React.DOM.div null, 'test'
+        React.createElement ConversationDetails, key: conversation.id, conversation: conversation, handleCoversationSelect: @handleCoversationChange
