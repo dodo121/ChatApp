@@ -6,6 +6,6 @@
     @props.handleCoversationChange conversation_id
 
   render: ->
-    React.DOM.ul null,
+    React.DOM.ul className: 'conversations-list',
       for conversation in @state.conversations
         React.createElement ConversationDetails, key: conversation.id, conversation: conversation, handleCoversationSelect: @handleCoversationChange

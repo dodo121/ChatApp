@@ -1,3 +1,15 @@
-// Place all the styles related to the conversations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.conversations-list {
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #DCDCDC;
+  }
+  li:hover {
+    background-color: #DCDCDC;
+  }
+  li:nth-last-of-type {
+    border-bottom: none;
+  }
+}
