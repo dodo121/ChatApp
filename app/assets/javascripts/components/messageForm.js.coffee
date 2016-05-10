@@ -9,8 +9,7 @@
   handleSubmit: (e) ->
     e.preventDefault()
     $.post "conversations/#{@props.conversationId}/messages", message: @state, (data) =>
-      App.room.send(data)
-      @props.handleNewMessage(data)
+      App.conversation.send(data)
       @setState @getInitialState()
     , 'JSON'
 
