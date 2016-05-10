@@ -8,7 +8,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post "#{@props.room_id}/messages", message: @state, (data) =>
+    $.post "conversations/#{@props.conversationId}/messages", message: @state, (data) =>
       App.room.send(data)
       @props.handleNewMessage(data)
       @setState @getInitialState()
@@ -22,6 +22,8 @@
           name: 'content'
           onChange: @handleChange
           rows: 3
+          placeholder: 'Type your message here'
+          value: @state.content
         React.DOM.button
           className: 'btn btn-primary'
           type: 'submit'

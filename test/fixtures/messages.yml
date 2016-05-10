@@ -2,8 +2,8 @@
 
 one:
   content: MyString
-  room: one
+  conversation: one
 
 two:
   content: MyString
-  room: two
+  conversation: two

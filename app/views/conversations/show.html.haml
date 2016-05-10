@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @conversation.title
+= link_to 'Edit', edit_conversation_path(@conversation)
+|
+= link_to 'Back', conversations_path

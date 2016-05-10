@@ -1,0 +1,1 @@
+json.merge! @conversation.as_json

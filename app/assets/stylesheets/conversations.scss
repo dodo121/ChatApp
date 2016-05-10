@@ -1,0 +1,15 @@
+.conversations-list {
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #DCDCDC;
+  }
+  li:hover {
+    background-color: #DCDCDC;
+  }
+  li:nth-last-of-type {
+    border-bottom: none;
+  }
+}
