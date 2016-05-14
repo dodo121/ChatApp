@@ -4,12 +4,16 @@
     conversationId: @props.conversation_id
 
   componentWillUpdate: ->
-    console.log 'did update'
     @setupAC()
+    @scrollToBottomOfMessagesBox()
 
   componentDidMount: ->
-    console.log 'did mount'
     @setupAC()
+    @scrollToBottomOfMessagesBox()
+
+  scrollToBottomOfMessagesBox: ->
+    height = jQuery('.messages-box')[0].scrollHeight
+    jQuery('.messages-box').scrollTop(height)
 
   setupAC: ->
     if App.cable.subscriptions['subscriptions'].length > 1
@@ -39,7 +43,8 @@
       React.DOM.h1 null, @state.conversationId
       React.DOM.div className: 'col-sm-3',
         React.createElement ConversationsList, conversations: @props.conversations, handleCoversationChange: @changeConversation
-      React.DOM.div className: 'col-sm-9',
+        #React.createElement UserStatus, statuses: @props.available_user_statuses
+      React.DOM.div className: 'col-sm-9 messages-box',
         for message in @state.messages
           React.createElement Message, key: message.id, message: message
         React.createElement MessageForm, conversationId: @state.conversationId
