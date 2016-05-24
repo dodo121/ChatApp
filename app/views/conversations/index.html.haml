@@ -1,5 +1,6 @@
 %p#notice= notice
 
 = react_component('Conversation',
-                  messages: @last_conversation.messages, conversation_id: @last_conversation.id, conversations: current_user.callers)
-
+                  messages: @last_conversation.messages,
+                  conversation_id: @last_conversation.id,
+                  conversations: current_user.callers)

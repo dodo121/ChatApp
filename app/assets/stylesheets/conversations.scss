@@ -7,9 +7,12 @@
     border: 1px solid #DCDCDC;
   }
   li:hover {
-    background-color: #DCDCDC;
+    background-color: #F5F5F5;
   }
   li:nth-last-of-type {
     border-bottom: none;
+  }
+  li.active {
+    background-color: #F5F5F5;
   }
 }
