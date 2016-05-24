@@ -13,3 +13,8 @@
     border-bottom: none;
   }
 }
+
+.messages-box {
+  max-height: 500px;
+  overflow-y: scroll;
+}

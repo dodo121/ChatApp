@@ -18,4 +18,5 @@
 //= require components
 //= require jquery
 //= require bootstrap-sprockets
+//= require react_bootstrap
 //= require_tree .

@@ -14,6 +14,8 @@ class User < ApplicationRecord
 
   scope :testing, -> { where(for_testing: true) }
 
+  enum status: [:active, :away, :inactive]
+
   def callers
     conversations.map do |conv|
       { conversation_id: conv.id, users_names: callers_names_except_self(conv.users) }
@@ -22,5 +24,9 @@ class User < ApplicationRecord
 
   def callers_names_except_self(users)
     users.select { |user| user != self }.map(&:email)
+  end
+
+  def change_status(new_status_id)
+    update_attributes(status: new_status_id) if User.statuses.values.include? new_status_id
   end
 end
