@@ -1,7 +1,7 @@
 @Conversation = React.createClass
   getInitialState: ->
-    messages: @props.messages
-    currentConversationId: @props.conversation_id
+    messages: @props.initialMessages
+    currentConversationId: @props.initialConversationId
 
   componentDidMount: ->
     @setupAC()
@@ -9,7 +9,7 @@
   setupAC: ->
     for conversation in @props.conversations
       do =>
-        App.conversation = App.cable.subscriptions.create { channel: "ConversationChannel", id: conversation.conversation_id },
+        App.conversation = App.cable.subscriptions.create { channel: "ConversationChannel", id: conversation.id },
           connected: ->
           disconnected: ->
           received: (data) =>
@@ -31,7 +31,10 @@
     React.DOM.div className: 'row',
       React.DOM.h1 null, @state.currentConversationId
       React.DOM.div className: 'col-sm-3',
-        React.createElement ConversationsList, conversations: @props.conversations, handleCoversationChange: @changeConversation, currentConversationId: @state.currentConversationId
+        React.createElement ConversationsList,
+          conversations: @props.conversations
+          handleCoversationChange: @changeConversation
+          currentConversationId: @state.currentConversationId
       React.DOM.div className: 'col-sm-9',
         for message in @state.messages
           React.createElement Message, key: message.id, message: message

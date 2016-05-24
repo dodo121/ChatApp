@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
   def callers
     conversations.map do |conv|
-      { conversation_id: conv.id, users_names: callers_names_except_self(conv.users) }
+      { id: conv.id, users_names: callers_names_except_self(conv.users) }
     end
   end
 

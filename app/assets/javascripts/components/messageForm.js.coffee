@@ -8,7 +8,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post "conversations/#{@props.conversationId}/messages", message: @state, (data) =>
+    $.post "conversations/#{@props.currentConversationId}/messages", message: @state, (data) =>
       App.conversation.send(data)
       @setState @getInitialState()
     , 'JSON'

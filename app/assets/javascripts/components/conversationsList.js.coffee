@@ -9,7 +9,7 @@
     React.DOM.ul className: 'conversations-list',
       for conversation in @state.conversations
         React.createElement ConversationDetails,
-          key: conversation.conversation_id
+          key: conversation.id
           conversation: conversation
           handleCoversationSelect: @handleCoversationChange
-          cssClassName: if @props.currentConversationId == conversation.conversation_id then 'active' else ''
+          cssClassName: if @props.currentConversationId == conversation.id then 'active' else ''
