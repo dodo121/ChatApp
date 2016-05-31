@@ -5,9 +5,7 @@
 
 #main {
   .container {
-    margin: 0 auto;
-    position: relative;
-    display: block;
+
   }
 }
 
@@ -24,4 +22,38 @@
 textarea.form-control {
   margin: 5px 0;
   width: 75%;
+}
+
+#devise\/sessions-new {
+  #main {
+    background-image: url('talking.jpg');
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+#login-box {
+  width: 400px;
+  background-color: #F5F5F5;
+  border: 1px solid #B1B0AB;
+  border-radius: 5%;
+  margin: 50px auto;
+
+  #content {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+#header {
+  height: 50px;
+  background-color: #DADADA;
+  font-size: 38px;
+}
+
+#footer {
+  height: 50px;
+  background-color: #2E2F30;
 }
