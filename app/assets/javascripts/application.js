@@ -19,3 +19,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+  var header = $('#header');
+  header.css('font-size', header.height() - 10);
+});

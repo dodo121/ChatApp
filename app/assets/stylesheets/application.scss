@@ -3,6 +3,12 @@
 @import "conversations";
 @import 'message';
 
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 #main {
   .container {
 
@@ -14,7 +20,7 @@
 }
 
 #conversation {
-  height: 500px;
+  max-height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -25,11 +31,17 @@ textarea.form-control {
 }
 
 #devise\/sessions-new {
+  background-image: image_url('login-page-background.jpg');
+  background-position: center center;
+
   #main {
-    background-image: url('talking.jpg');
-    height: 600px;
     width: 100%;
+    height: 100%;
     overflow: hidden;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
   }
 }
 
@@ -38,22 +50,41 @@ textarea.form-control {
   background-color: #F5F5F5;
   border: 1px solid #B1B0AB;
   border-radius: 5%;
-  margin: 50px auto;
+  margin: 150px auto;
 
   #content {
     width: 250px;
     margin: 0 auto;
     display: block;
+    padding: 20px 0;
   }
 }
 
 #header {
-  height: 50px;
+  height: 5%;
   background-color: #DADADA;
-  font-size: 38px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: block;
 }
 
 #footer {
-  height: 50px;
-  background-color: #2E2F30;
+  height: 3%;
+  background-color: #1B0E0C;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  #footer-text {
+    color: #fff;
+    padding: 1px 0;
+    position: relative;
+  }
+}
+
+.btn-primary {
+  background-color: #1B0E0C;
+  border-color: #1B0E0C;
 }
