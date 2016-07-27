@@ -1,7 +1,9 @@
 %p#notice= notice
 
-= react_component('Conversation',
-                  initialMessages: @last_conversation.messages,
-                  initialConversationId: @last_conversation.id,
-                  conversations: current_user.callers)
+#conversation
+  = react_component('Conversation',
+                    initialMessages: @last_conversation.messages,
+                    initialConversationId: @last_conversation.id,
+                    conversations: current_user.callers)
 = link_to 'log out', destroy_user_session_path, method: :delete
+= current_user.email

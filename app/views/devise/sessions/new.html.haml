@@ -17,7 +17,7 @@
       %p
         = f.submit "Log in", class: 'btn btn-primary'
 
-    //%h2 Test users
-    //%ul
-    //- testing_users.each do |u|
-    //  %li= "#{u.email} / #{u.login}"
+    %h2 Test users
+    %ul
+    - testing_users.each do |u|
+      %li= "#{u.email} / #{u.login}"

@@ -1,3 +1,9 @@
 .message {
   width: 75%;
 }
+
+.conversation-messages {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 500px;
+}
