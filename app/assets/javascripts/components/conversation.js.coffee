@@ -29,6 +29,13 @@
       conversations = @state.conversations
       conversations[index] = conversationWithUnreadMessages
       @setState conversations: conversations
+      @toggleSeen(message)
+
+  toggleSeen: (message) ->
+    $.ajax
+      method: "PATCH",
+#      url: "/converstions/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
+      url: "conversations/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
 
   changeConversation: (conversation_id) ->
     $.get "conversations/#{conversation_id}", (data) =>
