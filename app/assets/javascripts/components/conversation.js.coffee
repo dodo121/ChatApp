@@ -18,16 +18,17 @@
 
   addMessage: (message) ->
     if message.conversation_id == @state.currentConversationId
-      alert 'here'
       messages = React.addons.update(@state.messages, { $push: [message] })
       @setState messages: messages
     else
-      @state.conversations.find (conversation) =>
-        index = @state.conversations.indexOf(conversation)
-        conversation.newMessagesCount = conversation.newMessagesCount + 1
-        conversations = @state.conversations
-        conversations[index] = conversation
-        @setState conversations: conversations
+      conversationWithUnreadMessages = @state.conversations.find (conversation) =>
+        message.conversation_id = conversation.id
+
+      index = @state.conversations.indexOf(conversationWithUnreadMessages)
+      conversationWithUnreadMessages.newMessagesCount = conversationWithUnreadMessages.newMessagesCount + 1
+      conversations = @state.conversations
+      conversations[index] = conversationWithUnreadMessages
+      @setState conversations: conversations
 
   changeConversation: (conversation_id) ->
     $.get "conversations/#{conversation_id}", (data) =>
