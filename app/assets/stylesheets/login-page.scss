@@ -1,0 +1,47 @@
+#devise\/sessions-new body {
+  background: image_url('login-page-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  #login-box {
+    width: 100%;
+    background-color: #F5F5F5;
+    border: 1px solid #B1B0AB;
+    border-radius: 1%;
+    margin: 50px auto;
+
+    #content {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+      padding: 20px 0;
+    }
+  }
+
+  .container {
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #devise\/sessions-new body {
+    #login-box {
+      width: 400px;
+      background-color: #F5F5F5;
+      border: 1px solid #B1B0AB;
+      border-radius: 5%;
+      margin: 150px auto;
+
+      #content {
+        width: 250px;
+        margin: 0 auto;
+        display: block;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .container {
+    width: initial;
+  }
+}
+

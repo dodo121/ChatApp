@@ -2,6 +2,7 @@
 %html{id: "#{params[:controller]}-#{params[:action]}"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
     %title ChatApp
     = csrf_meta_tags
     = action_cable_meta_tag

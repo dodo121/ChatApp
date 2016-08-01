@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "conversations";
 @import 'message';
+@import 'login-page';
 
 * {
   margin: 0;
@@ -38,33 +39,6 @@ textarea.form-control {
   width: 75%;
 }
 
-#devise\/sessions-new body {
-  background: image_url('login-page-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-
-  #main {
-    overflow: hidden;
-  }
-
-  .form-group {
-    margin-bottom: 10px;
-  }
-}
-
-#login-box {
-  width: 400px;
-  background-color: #F5F5F5;
-  border: 1px solid #B1B0AB;
-  border-radius: 5%;
-  margin: 150px auto;
-
-  #content {
-    width: 250px;
-    margin: 0 auto;
-    display: block;
-    padding: 20px 0;
-  }
-}
 
 #header {
   height: 40px;
