@@ -21,6 +21,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-  var header = $('#header');
-  header.css('font-size', header.height() - 10);
+  //var header = $('#header');
+  //header.css('font-size', header.height() - 10);
 });

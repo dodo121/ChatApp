@@ -1,5 +1,5 @@
 !!!
-%html
+%html{id: "#{params[:controller]}-#{params[:action]}"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ChatApp
@@ -7,13 +7,15 @@
     = action_cable_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
-  %body{id: "#{params[:controller]}-#{params[:action]}"}
+  %body
     #header
       .container
         CHAT APP
-    #main
-      .container
-        = yield
+    .container
+      #main
+        .wrapper
+          .container
+            = yield
+          .push
     #footer
-      #footer-text
-        Chat App @ 2016 by dodo121
+      Chat App @ 2016 by dodo121
