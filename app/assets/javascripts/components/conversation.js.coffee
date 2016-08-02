@@ -3,6 +3,7 @@
     messages: @props.initialMessages
     currentConversationId: @props.initialConversationId
     conversations: @props.conversations
+    currentUserId: @props.current_user_id
 
   componentDidMount: ->
     @setupAC()
@@ -34,7 +35,6 @@
   toggleSeen: (message) ->
     $.ajax
       method: "PATCH",
-#      url: "/converstions/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
       url: "conversations/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
 
   changeConversation: (conversation_id) ->
@@ -51,5 +51,5 @@
           currentConversationId: @state.currentConversationId
       React.DOM.div className: 'col-sm-9 col-xs-12 conversation-messages',
         for message in @state.messages
-          React.createElement Message, key: message.id, message: message
+          React.createElement Message, key: message.id, message: message, current_user_id: @props.current_user_id
         React.createElement MessageForm, currentConversationId: @state.currentConversationId
