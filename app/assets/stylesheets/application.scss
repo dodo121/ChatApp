@@ -27,7 +27,13 @@ html, body {
 }
 
 #main {
-  height: calc(100vh - 25px);
+  min-height: calc(100vh - 25px);
+}
+
+@media screen and (min-width: 992px) {
+  #main {
+    height: calc(100vh - 25px);
+  }
 }
 
 .panel-body {
