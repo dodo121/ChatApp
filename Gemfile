@@ -31,6 +31,7 @@ gem 'devise'
 gem 'haml'
 gem 'ffaker'
 gem 'pg'
+gem 'redis'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
