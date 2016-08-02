@@ -1,8 +1,12 @@
+$silver: #DADADA;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "conversations";
 @import 'message';
 @import 'login-page';
+
+
 
 * {
   margin: 0;
@@ -14,27 +18,43 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto; /* the bottom margin is the negative value of the footer's height */
 }
 #footer, .push {
   height: 25px; /* .push must be the same height as .footer */
 }
 
 #footer {
-  background-color: #944210;
+  background-color: #000;
   color: #F5F5F5;
   text-align: center;
 }
 
-#main {
-  min-height: calc(100vh - 25px);
+#header {
+  height: 40px;
+  background-color: $silver;
+  width: 100%;
+  display: block;
+  z-index: 9999;
+  font-size: 30px;
 }
 
-@media screen and (min-width: 992px) {
-  #main {
-    height: calc(100vh - 25px);
-  }
+#main {
+  min-height: calc(100vh - 65px);
+  //min-height: 100vh;
 }
+
+//@media screen and (min-width: 768px) {
+//  #main {
+//    min-height: calc(100vh - 25px);
+//  }
+//}
+
+//@media screen and (min-width: 992px) {
+//  #main {
+//    height: 100vh;
+//  }
+//}
 
 .panel-body {
   padding: 0 15px;
@@ -46,18 +66,7 @@ textarea.form-control {
 }
 
 
-#header {
-  height: 40px;
-  background-color: #DADADA;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: block;
-  z-index: 9999;
-  font-size: 30px;
-}
-
-.btn-primary {
-  background-color: #944210;
-  border-color: #944210;
+.btn-primary, .btn-primary:hover, .btn-primary:active .btn-primary:focus {
+  background-color: #000;
+  border-color: #000;
 }

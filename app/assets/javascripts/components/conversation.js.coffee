@@ -44,13 +44,12 @@
 
   render: ->
     React.DOM.div className: 'row',
-      React.DOM.h1 null, @state.currentConversationId
-      React.DOM.div className: 'col-sm-3',
+      React.DOM.div className: 'col-sm-3 col-xs-12',
         React.createElement ConversationsList,
           conversations: @state.conversations
           handleCoversationChange: @changeConversation
           currentConversationId: @state.currentConversationId
-      React.DOM.div className: 'col-sm-9 conversation-messages',
+      React.DOM.div className: 'col-sm-9 col-xs-12 conversation-messages',
         for message in @state.messages
           React.createElement Message, key: message.id, message: message
         React.createElement MessageForm, currentConversationId: @state.currentConversationId

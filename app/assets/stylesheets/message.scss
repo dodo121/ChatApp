@@ -1,9 +1,26 @@
-.message {
-  width: 75%;
-}
-
 .conversation-messages {
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 600px;
+}
+
+.panel-info {
+  border-color: #6d6d6d;
+  color: #000;
+  > .panel-heading {
+    color: #000;
+    background-color: $silver;
+    border-color: #6d6d6d;
+  }
+
+}
+
+.message {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .message {
+    width: 75%;
+  }
 }
