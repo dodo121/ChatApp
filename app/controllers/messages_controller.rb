@@ -14,10 +14,14 @@ class MessagesController < ApplicationController
     end
   end
 
-  def toggle_seen
+  def make_seen
     @conversation.messages.find(params[:message_id]).toggle!(:seen)
     render nothing: true
   end
+
+  # def make_unseen
+  #   @conversation.messages.find(params[:message_id]).update_attributes(seen: false)
+  # end
 
   private
 

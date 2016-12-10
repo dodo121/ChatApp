@@ -1,11 +1,19 @@
 @Message = React.createClass
+  current_message: (sender_id, current_user_id) ->
+    sender_id == current_user_id
+
+  makeMessageSeen: (message) ->
+    $.ajax
+      method: "PATCH",
+      url: "conversations/#{message.conversation_id}/messages/#{message.id}/make_seen"
+
   render: ->
-    panelType = if @props.message.message_sender_id == @props.current_user_id
+    panelType = if current_message(@props.message.message_sender_id, @props.current_user_id)
                   'primary text-right'
                 else
                   'info text-left'
 
-    colAlignCss = if @props.message.message_sender_id == @props.current_user_id
+    colAlignCss = if current_message(@props.message.message_sender_id, @props.current_user_id)
                     ['col-xs-10', 'col-xs-offset-2']
                   else
                     ['col-xs-offset-2', 'col-xs-10']

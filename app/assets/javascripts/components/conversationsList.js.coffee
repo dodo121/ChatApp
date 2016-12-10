@@ -14,3 +14,5 @@
           handleCoversationSelect: @handleCoversationChange
           cssClassName: if @props.currentConversationId == conversation.id then 'active' else ''
           newMessagesCount: conversation.newMessagesCount
+
+console.log(@ConversationsList)

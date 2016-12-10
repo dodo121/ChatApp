@@ -12,13 +12,12 @@
     for conversation in @props.conversations
       do =>
         App.conversation = App.cable.subscriptions.create { channel: "ConversationChannel", id: conversation.id },
-          connected: ->
-          disconnected: ->
           received: (data) =>
             this.addMessage(data)
 
   addMessage: (message) ->
     if message.conversation_id == @state.currentConversationId
+      message.makeMessageSeen
       messages = React.addons.update(@state.messages, { $push: [message] })
       @setState messages: messages
     else
@@ -30,12 +29,6 @@
       conversations = @state.conversations
       conversations[index] = conversationWithUnreadMessages
       @setState conversations: conversations
-      @toggleSeen(message)
-
-  toggleSeen: (message) ->
-    $.ajax
-      method: "PATCH",
-      url: "conversations/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
 
   changeConversation: (conversation_id) ->
     $.get "conversations/#{conversation_id}", (data) =>
