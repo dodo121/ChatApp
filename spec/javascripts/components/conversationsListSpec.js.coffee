@@ -1,7 +1,4 @@
-#= require application
-#= require components
-
-TestUtils = React.addons.TestUtils
+#= require spec_helper
 
 conversations = [
   { id: 4, users_names: ["ardith_volkman@example.com"], newMessagesCount: 8 }
