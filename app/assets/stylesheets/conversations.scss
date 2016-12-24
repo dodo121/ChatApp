@@ -28,3 +28,8 @@
 .conversations-list {
   padding-left: 0;
 }
+
+.conversation_users_names {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
