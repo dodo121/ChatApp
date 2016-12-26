@@ -29,4 +29,3 @@ describe 'conversationsList', =>
     renderedElement = TestUtils.renderIntoDocument(testedElement)
     lis = TestUtils.scryRenderedDOMComponentsWithTag(renderedElement, 'li')
     expect(lis.length).toEqual(2)
-

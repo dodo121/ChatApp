@@ -6,6 +6,7 @@
     @props.handleCoversationChange conversation_id
 
   render: ->
+    React.DOM.ul className: 'conversations-list'
     React.DOM.ul className: 'conversations-list',
       for conversation in @state.conversations
         React.createElement ConversationDetails,
