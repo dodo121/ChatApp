@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta4', '< 5.1'
+gem 'rails', '~> 5.2.1'
+ruby '2.5.3'
 
 # Use Puma as the app server
 gem 'puma'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -22,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'react-rails', '~> 1.6.1'
+#gem 'react-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'pry'
@@ -31,6 +32,8 @@ gem 'haml'
 gem 'ffaker'
 gem 'pg'
 gem 'redis'
+gem 'webpacker', '~> 3.5'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

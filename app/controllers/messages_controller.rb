@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   respond_to :json
 
-  before_filter :find_conversation
+  before_action :find_conversation
 
   def create
     @message = @conversation.messages.build(message_params)
