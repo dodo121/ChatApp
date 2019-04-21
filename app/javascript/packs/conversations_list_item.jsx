@@ -10,7 +10,7 @@ export default class ConversationsListItem extends Component {
   render() {
     return(
       <li
-        className="{this.props.cssClassName} conversation-details"
+        className={`${this.props.cssClassName} conversation-details`}
         onClick={this.props.handleConversationChange}>
         <div className='row'>
           <div className='col-xs-8 conversation_users_names'>

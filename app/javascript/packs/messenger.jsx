@@ -34,17 +34,11 @@ class Messenger extends Component {
       return <ConversationsListItem
         key={conv.id}
         conversation={conv}
+        cssClassName={(this.state.currentConversationId == conv.id) ? 'active' : ''}
         handleConversationChange={() => this.changeConversation(conv.id) }/>
     });
 
     let messagesEls = this.state.messages.map(message => {
-    //  panelType = if(message.message_sender_id == this.props.current_user_id) {
-    //    'primary text-right'
-    //  }
-    //  } else {
-    //    'info text-left'
-    //  }
-    //}
       return <Message
         key={message.id}
         message={message}
