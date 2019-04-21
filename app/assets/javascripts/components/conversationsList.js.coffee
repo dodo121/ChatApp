@@ -1,3 +1,9 @@
+# import React from 'react'
+# import ReactDOM from 'react-dom'
+# import PropTypes from 'prop-types'
+
+
+
 #@ConversationsList = React.createClass
 #  getInitialState: ->
 #    conversations: @props.conversations

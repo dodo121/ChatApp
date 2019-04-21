@@ -1,7 +1,0 @@
-%p#notice= notice
-
-#conversation
-  = javascript_pack_tag 'application'
-  = javascript_pack_tag 'hello_react'
-= link_to 'log out', destroy_user_session_path, method: :delete
-= current_user.email

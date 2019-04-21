@@ -8,6 +8,7 @@
     = action_cable_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = javascript_pack_tag 'application'
   %body
     #header
       .container
@@ -19,4 +20,4 @@
             = yield
           .push
     #footer
-      Chat App @ 2016 by dodo121
+      Chat App @ 2019 by dodo121
