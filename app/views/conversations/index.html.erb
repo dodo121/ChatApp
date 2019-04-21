@@ -1,0 +1,11 @@
+<p id="notice"></p>
+
+<%= content_tag :div, id: 'conversation', data: {
+    initialMessages: @last_conversation.messages,
+    initialConversationId: @last_conversation.id,
+    conversations: current_user.callers,
+    current_user_id: current_user.id
+    }.to_json do %><% end %>
+<%= link_to 'log out', destroy_user_session_path, method: :delete %>
+<%= current_user.email %>
+<%= javascript_pack_tag 'messenger' %>

@@ -1,0 +1,14 @@
+{
+  "application.js": "/packs/application-3500364ab78a7400d1bc.js",
+  "application.js.map": "/packs/application-3500364ab78a7400d1bc.js.map",
+  "conversations_list.js": "/packs/conversations_list-2fba543983a09cbacd7b.js",
+  "conversations_list.js.map": "/packs/conversations_list-2fba543983a09cbacd7b.js.map",
+  "conversations_list_item.js": "/packs/conversations_list_item-439a621ee7bd975b614a.js",
+  "conversations_list_item.js.map": "/packs/conversations_list_item-439a621ee7bd975b614a.js.map",
+  "hello_react.js": "/packs/hello_react-a3068226a0889b819bf1.js",
+  "hello_react.js.map": "/packs/hello_react-a3068226a0889b819bf1.js.map",
+  "message.js": "/packs/message-f666bb0669350a71c7d5.js",
+  "message.js.map": "/packs/message-f666bb0669350a71c7d5.js.map",
+  "messenger.js": "/packs/messenger-40604bdf1b18f102cf49.js",
+  "messenger.js.map": "/packs/messenger-40604bdf1b18f102cf49.js.map"
+}
