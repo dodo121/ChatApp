@@ -12,5 +12,4 @@ class Message < ApplicationRecord
     h[:user_name] = sender.email
     h
   end
-
 end

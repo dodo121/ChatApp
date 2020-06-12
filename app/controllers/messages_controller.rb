@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 
   def toggle_seen
     @conversation.messages.find(params[:message_id]).toggle!(:seen)
-    render nothing: true
+    head :ok
   end
 
   private

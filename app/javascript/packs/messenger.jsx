@@ -12,13 +12,14 @@ class Messenger extends Component {
     this.state = {
       messages: props.initialMessages,
       currentConversationId: props.initialConversationId,
-      currentUserId: props.current_user_id
+      currentUserId: props.current_user_id,
+      conversations: props.conversations
     };
     this.setupAC();
   }
 
   setupAC = () => {
-    this.props.conversations.forEach((conv) => {
+    this.state.conversations.forEach((conv) => {
       App.conversation =
         App.cable.subscriptions.create(
           { channel: "ConversationChannel", id: conv.id },
@@ -36,28 +37,39 @@ class Messenger extends Component {
   addMessage = (message) => {
     if(message.conversation_id == this.state.currentConversationId) {
       this.setState({ messages: [...this.state.messages, message] });
+
+      if(message.message_sender_id != this.props.current_user_id && !message.seen) {
+        this.toggleSeen(message);
+      }
     } else {
-      //conversationWithUnreadMessages = this.state.conversations.find (conversation) => {
-      //  message.conversation_id = conversation.id
-      //}
+      let conversations = this.state.conversations;
+
+      const conversationWithUnreadMessages = conversations.find((conversation) =>
+        message.conversation_id == conversation.id
+      );
+      let index = conversations.indexOf(conversationWithUnreadMessages)
+      conversationWithUnreadMessages.newMessagesCount = conversationWithUnreadMessages.newMessagesCount + 1
+      conversations[index] = conversationWithUnreadMessages
+      this.setState({ conversations: conversations });
     }
   };
 
+  toggleSeen = (message) => {
+    $.ajax({
+        method: "PATCH",
+        url: `conversations/${message.conversation_id}/messages/${message.id}/toggle_seen`
+    }).done(() => {
+      alert('toggled');
+    })
+  }
+
   componentDidUpdate = () => {
-    //console.log($('.conversation-messages').position());
     $('.conversation-messages').animate({
       scrollTop: $('#conversation-bottom-position').position().top
     }, 'fast');
   };
-    //index = @state.conversations.indexOf(conversationWithUnreadMessages)
-    //conversationWithUnreadMessages.newMessagesCount = conversationWithUnreadMessages.newMessagesCount + 1
-    //conversations = @state.conversations
-    //conversations[index] = conversationWithUnreadMessages
-    //@setState conversations: conversations
-    //@toggleSeen(message)
-  //
+
   changeConversation = (conversation_id) => {
-    console.log(conversation_id);
     $.get(
       `conversations/${conversation_id}`,
       (data) => {
@@ -111,10 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ReactDOM.render(<Messenger {...data} />, node)
 })
-//#
-//#  toggleSeen: (message) ->
-//#    $.ajax
-//#      method: "PATCH",
-//#      url: "conversations/#{message.conversation_id}/messages/#{message.id}/toggle_seen"
-//#
 

@@ -13,7 +13,6 @@ export default class MessageForm extends Component {
   }
 
   handleChange = (e) => {
-    console.log('handle change called');
     const content = e.target.value;
     this.setState({ content: content });
     this.setState( { submitable: content != '' })
