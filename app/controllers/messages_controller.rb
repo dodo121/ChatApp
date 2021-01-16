@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   end
 
   def toggle_seen
-    @conversation.messages.find(params[:message_id]).toggle!(:seen)
+    @conversation.messages.find(params[:message_id]).update(seen: true)
     head :ok
   end
 

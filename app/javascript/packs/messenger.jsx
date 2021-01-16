@@ -5,12 +5,12 @@ import ConversationsList from './conversations_list';
 import ConversationsListItem from './conversations_list_item';
 import Message from './message'
 import Conversation from './conversation'
+import TrackVisibility from 'react-on-screen'
 
 class Messenger extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      messages: props.initialMessages,
       currentConversationId: props.initialConversationId,
       currentUserId: props.current_user_id,
       conversations: props.conversations
@@ -37,11 +37,9 @@ class Messenger extends Component {
   addMessage = (message) => {
     if(message.conversation_id == this.state.currentConversationId) {
       this.setState({ messages: [...this.state.messages, message] });
+    }
 
-      if(message.message_sender_id != this.props.current_user_id && !message.seen) {
-        this.toggleSeen(message);
-      }
-    } else {
+    if(message.message_sender_id != this.props.current_user_id && !message.seen) {
       let conversations = this.state.conversations;
 
       const conversationWithUnreadMessages = conversations.find((conversation) =>
@@ -52,21 +50,6 @@ class Messenger extends Component {
       conversations[index] = conversationWithUnreadMessages
       this.setState({ conversations: conversations });
     }
-  };
-
-  toggleSeen = (message) => {
-    $.ajax({
-        method: "PATCH",
-        url: `conversations/${message.conversation_id}/messages/${message.id}/toggle_seen`
-    }).done(() => {
-      alert('toggled');
-    })
-  }
-
-  componentDidUpdate = () => {
-    $('.conversation-messages').animate({
-      scrollTop: $('#conversation-bottom-position').position().top
-    }, 'fast');
   };
 
   changeConversation = (conversation_id) => {
@@ -91,14 +74,6 @@ class Messenger extends Component {
         handleConversationChange={() => this.changeConversation(conv.id) }/>
     });
 
-    let messagesEls = this.state.messages.map(message => {
-      return <Message
-        key={message.id}
-        message={message}
-        mine={this.props.current_user_id == message.message_sender_id}
-        current_user_id={this.props.current_user_id} />
-    });
-
     return(
       <div className='row'>
         <div className='col-sm-3 col-xs-12'>
@@ -109,7 +84,7 @@ class Messenger extends Component {
 
         <div className='col-sm-9 col-xs-12'>
           <Conversation
-            messages={messagesEls}
+            messages={this.props.initialMessages}
             currentConversationId={this.state.currentConversationId}/>
         </div>
       </div>
