@@ -19,5 +19,5 @@
 
     %h2 Test users
     %ul
-      - testing_users.each do |u|
+      - Rails.env.development? && testing_users.each do |u|
         %li= "#{u.email} / #{u.login}"
