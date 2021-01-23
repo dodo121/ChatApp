@@ -5,12 +5,14 @@ $silver: #DADADA;
 @import "conversations";
 @import 'message';
 @import 'login-page';
+@import 'fonts';
 
 * {
   margin: 0;
 }
 html, body {
   height: 100%;
+  font-family: Poppins, 'sans-serif';
 }
 .wrapper {
   min-height: 100%;

@@ -1,12 +1,12 @@
 {
   "application.js": "/packs/js/application-981d57ca76e124dd3932.js",
   "application.js.map": "/packs/js/application-981d57ca76e124dd3932.js.map",
-  "conversation.js": "/packs/js/conversation-1e08bc46a174157dc8a8.js",
-  "conversation.js.map": "/packs/js/conversation-1e08bc46a174157dc8a8.js.map",
-  "conversations_list.js": "/packs/js/conversations_list-e46ff4f7560153ecebe1.js",
-  "conversations_list.js.map": "/packs/js/conversations_list-e46ff4f7560153ecebe1.js.map",
-  "conversations_list_item.js": "/packs/js/conversations_list_item-3febaa6518f077805787.js",
-  "conversations_list_item.js.map": "/packs/js/conversations_list_item-3febaa6518f077805787.js.map",
+  "conversation.js": "/packs/js/conversation-0a8b0edb280e9401581d.js",
+  "conversation.js.map": "/packs/js/conversation-0a8b0edb280e9401581d.js.map",
+  "conversations_list.js": "/packs/js/conversations_list-246ba1711e2e458474bf.js",
+  "conversations_list.js.map": "/packs/js/conversations_list-246ba1711e2e458474bf.js.map",
+  "conversations_list_item.js": "/packs/js/conversations_list_item-4c12ef768f5fdf25c379.js",
+  "conversations_list_item.js.map": "/packs/js/conversations_list_item-4c12ef768f5fdf25c379.js.map",
   "entrypoints": {
     "application": {
       "js": [
@@ -18,67 +18,67 @@
     },
     "conversation": {
       "js": [
-        "/packs/js/conversation-1e08bc46a174157dc8a8.js"
+        "/packs/js/conversation-0a8b0edb280e9401581d.js"
       ],
       "js.map": [
-        "/packs/js/conversation-1e08bc46a174157dc8a8.js.map"
+        "/packs/js/conversation-0a8b0edb280e9401581d.js.map"
       ]
     },
     "conversations_list_item": {
       "js": [
-        "/packs/js/conversations_list_item-3febaa6518f077805787.js"
+        "/packs/js/conversations_list_item-4c12ef768f5fdf25c379.js"
       ],
       "js.map": [
-        "/packs/js/conversations_list_item-3febaa6518f077805787.js.map"
+        "/packs/js/conversations_list_item-4c12ef768f5fdf25c379.js.map"
       ]
     },
     "conversations_list": {
       "js": [
-        "/packs/js/conversations_list-e46ff4f7560153ecebe1.js"
+        "/packs/js/conversations_list-246ba1711e2e458474bf.js"
       ],
       "js.map": [
-        "/packs/js/conversations_list-e46ff4f7560153ecebe1.js.map"
+        "/packs/js/conversations_list-246ba1711e2e458474bf.js.map"
       ]
     },
     "hello_react": {
       "js": [
-        "/packs/js/hello_react-d9ff6add5d164f30e0a4.js"
+        "/packs/js/hello_react-7f5a2808a7a4a97ab4d6.js"
       ],
       "js.map": [
-        "/packs/js/hello_react-d9ff6add5d164f30e0a4.js.map"
+        "/packs/js/hello_react-7f5a2808a7a4a97ab4d6.js.map"
       ]
     },
     "message_form": {
       "js": [
-        "/packs/js/message_form-582b09ce57f47c7ce3c0.js"
+        "/packs/js/message_form-86d16633d99e4f8a115e.js"
       ],
       "js.map": [
-        "/packs/js/message_form-582b09ce57f47c7ce3c0.js.map"
+        "/packs/js/message_form-86d16633d99e4f8a115e.js.map"
       ]
     },
     "message": {
       "js": [
-        "/packs/js/message-1d0d38448b5f6f72ff3e.js"
+        "/packs/js/message-ee0da1bdd64a7a5ee70d.js"
       ],
       "js.map": [
-        "/packs/js/message-1d0d38448b5f6f72ff3e.js.map"
+        "/packs/js/message-ee0da1bdd64a7a5ee70d.js.map"
       ]
     },
     "messenger": {
       "js": [
-        "/packs/js/messenger-58b94e64ea3f100900e8.js"
+        "/packs/js/messenger-231b021f3d4a6dd13f1e.js"
       ],
       "js.map": [
-        "/packs/js/messenger-58b94e64ea3f100900e8.js.map"
+        "/packs/js/messenger-231b021f3d4a6dd13f1e.js.map"
       ]
     }
   },
-  "hello_react.js": "/packs/js/hello_react-d9ff6add5d164f30e0a4.js",
-  "hello_react.js.map": "/packs/js/hello_react-d9ff6add5d164f30e0a4.js.map",
-  "message.js": "/packs/js/message-1d0d38448b5f6f72ff3e.js",
-  "message.js.map": "/packs/js/message-1d0d38448b5f6f72ff3e.js.map",
-  "message_form.js": "/packs/js/message_form-582b09ce57f47c7ce3c0.js",
-  "message_form.js.map": "/packs/js/message_form-582b09ce57f47c7ce3c0.js.map",
-  "messenger.js": "/packs/js/messenger-58b94e64ea3f100900e8.js",
-  "messenger.js.map": "/packs/js/messenger-58b94e64ea3f100900e8.js.map"
+  "hello_react.js": "/packs/js/hello_react-7f5a2808a7a4a97ab4d6.js",
+  "hello_react.js.map": "/packs/js/hello_react-7f5a2808a7a4a97ab4d6.js.map",
+  "message.js": "/packs/js/message-ee0da1bdd64a7a5ee70d.js",
+  "message.js.map": "/packs/js/message-ee0da1bdd64a7a5ee70d.js.map",
+  "message_form.js": "/packs/js/message_form-86d16633d99e4f8a115e.js",
+  "message_form.js.map": "/packs/js/message_form-86d16633d99e4f8a115e.js.map",
+  "messenger.js": "/packs/js/messenger-231b021f3d4a6dd13f1e.js",
+  "messenger.js.map": "/packs/js/messenger-231b021f3d4a6dd13f1e.js.map"
 }
