@@ -14,24 +14,30 @@ html, body {
   height: 100%;
   font-family: Poppins, 'sans-serif';
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
-  min-height: 100%;
-  height: auto !important;
   height: 100%;
   margin: 0 auto; /* the bottom margin is the negative value of the footer's height */
 }
-#footer, .push {
-  height: 25px; /* .push must be the same height as .footer */
-}
 
 #footer {
+  height: 25px;
   background-color: #000;
   color: #F5F5F5;
   text-align: center;
+  margin-top: auto;
 }
 
 #header {
   height: 40px;
+  align-self: flex-start;
+  //padding-bottom: -40px;
   background-color: $silver;
   width: 100%;
   display: block;
@@ -40,7 +46,8 @@ html, body {
 }
 
 #main {
-  min-height: calc(100vh - 65px);
+  height: 100%;
+  align-self: center;
   //min-height: 100vh;
 }
 
