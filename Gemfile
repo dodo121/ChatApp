@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
-ruby '2.5.3'
+gem 'rails', '6.1.3'
+ruby '2.7.2'
 
 # Use Puma as the app server
 gem 'puma'
@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.0'
 #gem 'react-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
-gem 'pry'
 gem 'devise'
 gem 'haml'
 gem 'ffaker'
@@ -39,7 +38,8 @@ gem 'webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # gem 'byebug'
+  # gem 'pry'
 end
 
 group :development do
