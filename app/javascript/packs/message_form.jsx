@@ -22,7 +22,7 @@ export default class MessageForm extends Component {
     e.preventDefault();
     $.post(
       `conversations/${this.props.currentConversationId}/messages`,
-      { message: this.state },
+      { message: { content: this.state.content }},
       (data) => {
         App.conversation.send(data);
         this.setState({ content : '' })
