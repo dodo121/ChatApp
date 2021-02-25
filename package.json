@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "private": true,
-  "name": "ChatApp",
+  "name": "chatapp",
   "dependencies": {
     "@babel/preset-react": "^7.12.13",
     "@rails/webpacker": "5.2.1",
