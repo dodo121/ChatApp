@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 import ConversationsList from './conversations_list';
 import ConversationsListItem from './conversations_list_item';
 import Message from './message'

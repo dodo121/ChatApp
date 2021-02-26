@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 
 export default class ConversationsListItem extends Component {
   constructor(props) {

@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import React from 'react'
 
 const Message = (props) =>
   <div className={`message panel panel-primary text-${(props.mine) ? 'right col-xs-offset-2' : 'left '}`}>
