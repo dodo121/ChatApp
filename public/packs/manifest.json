@@ -1,84 +1,14 @@
 {
-  "application.js": "/packs/js/application-981d57ca76e124dd3932.js",
-  "application.js.map": "/packs/js/application-981d57ca76e124dd3932.js.map",
-  "conversation.js": "/packs/js/conversation-f709312572c8925d1795.js",
-  "conversation.js.map": "/packs/js/conversation-f709312572c8925d1795.js.map",
-  "conversations_list.js": "/packs/js/conversations_list-8f4c904640ad6dfd6864.js",
-  "conversations_list.js.map": "/packs/js/conversations_list-8f4c904640ad6dfd6864.js.map",
-  "conversations_list_item.js": "/packs/js/conversations_list_item-fa75819f563fb7dd20ba.js",
-  "conversations_list_item.js.map": "/packs/js/conversations_list_item-fa75819f563fb7dd20ba.js.map",
+  "application.js": "/packs/js/application-2181adcc3224cdc0c9c1.js",
+  "application.js.map": "/packs/js/application-2181adcc3224cdc0c9c1.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-981d57ca76e124dd3932.js"
+        "/packs/js/application-2181adcc3224cdc0c9c1.js"
       ],
       "js.map": [
-        "/packs/js/application-981d57ca76e124dd3932.js.map"
-      ]
-    },
-    "conversation": {
-      "js": [
-        "/packs/js/conversation-f709312572c8925d1795.js"
-      ],
-      "js.map": [
-        "/packs/js/conversation-f709312572c8925d1795.js.map"
-      ]
-    },
-    "conversations_list_item": {
-      "js": [
-        "/packs/js/conversations_list_item-fa75819f563fb7dd20ba.js"
-      ],
-      "js.map": [
-        "/packs/js/conversations_list_item-fa75819f563fb7dd20ba.js.map"
-      ]
-    },
-    "conversations_list": {
-      "js": [
-        "/packs/js/conversations_list-8f4c904640ad6dfd6864.js"
-      ],
-      "js.map": [
-        "/packs/js/conversations_list-8f4c904640ad6dfd6864.js.map"
-      ]
-    },
-    "hello_react": {
-      "js": [
-        "/packs/js/hello_react-15d506eaf8fd2a27e69f.js"
-      ],
-      "js.map": [
-        "/packs/js/hello_react-15d506eaf8fd2a27e69f.js.map"
-      ]
-    },
-    "message_form": {
-      "js": [
-        "/packs/js/message_form-d55fb019648eb0e2e713.js"
-      ],
-      "js.map": [
-        "/packs/js/message_form-d55fb019648eb0e2e713.js.map"
-      ]
-    },
-    "message": {
-      "js": [
-        "/packs/js/message-9c9bb4dbc0168952297a.js"
-      ],
-      "js.map": [
-        "/packs/js/message-9c9bb4dbc0168952297a.js.map"
-      ]
-    },
-    "messenger": {
-      "js": [
-        "/packs/js/messenger-64383cb13b26c90305cb.js"
-      ],
-      "js.map": [
-        "/packs/js/messenger-64383cb13b26c90305cb.js.map"
+        "/packs/js/application-2181adcc3224cdc0c9c1.js.map"
       ]
     }
-  },
-  "hello_react.js": "/packs/js/hello_react-15d506eaf8fd2a27e69f.js",
-  "hello_react.js.map": "/packs/js/hello_react-15d506eaf8fd2a27e69f.js.map",
-  "message.js": "/packs/js/message-9c9bb4dbc0168952297a.js",
-  "message.js.map": "/packs/js/message-9c9bb4dbc0168952297a.js.map",
-  "message_form.js": "/packs/js/message_form-d55fb019648eb0e2e713.js",
-  "message_form.js.map": "/packs/js/message_form-d55fb019648eb0e2e713.js.map",
-  "messenger.js": "/packs/js/messenger-64383cb13b26c90305cb.js",
-  "messenger.js.map": "/packs/js/messenger-64383cb13b26c90305cb.js.map"
+  }
 }
